@@ -14,6 +14,10 @@ keyInput.addEventListener("keydown", (event) => {
     console.log(`Key pressed: ${event.key}`);
 });
 
+keyInput.addEventListener("input", (event) => {
+    document.getElementById('inputDisplay').textContent = event.target.value;
+});
+
 const blurFocus = document.getElementById('focusInput');
 blurFocus.addEventListener("focus", () => {
     blurFocus.style.backgroundColor = "lightblue";
