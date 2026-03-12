@@ -2,11 +2,16 @@ const mouseButton = document.getElementById('btn');
 mouseButton.addEventListener("mouseover", () => {
     mouseButton.style.backgroundColor = "red";
     mouseButton.style.color = "white";
+    mouseButton.textContent = "I love you";
 });
 
 mouseButton.addEventListener("mouseout", () => {
-    mouseButton.style.backgroundColor = "white";
+    mouseButton.style.backgroundColor = "lightgray";
     mouseButton.style.color = "black";
+    mouseButton.textContent = "Come back";
+    setTimeout(() => {
+        mouseButton.textContent = "Hover me";
+    }, 3000);
 });
 
 const keyInput = document.getElementById('keyboardInput');
